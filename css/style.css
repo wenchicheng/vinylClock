@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid rgb(120, 4, 4); */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+#container {
+  width: 1024px;
+  height: 768px;
+  background-color: rgb(227, 227, 227);
+  /* 置中--------------------- */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ------------------------- */
+
+}
+
+#vinyl {
+  width: 500px;
+  height: 500px;
+  background-image: url("../images/orange_vinyl.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 置中--------------------- */
+  /* background-position: center; */
+  position: fixed;
+  top: 17%;
+  left: 26%;
+
+}
+
+.rotate {
+  animation-name: rotate-keyframe;
+  /* 套用的 keyframe */
+  animation-duration: 60s;
+  /* 動畫持續時間 */
+  animation-iteration-count: infinite;
+  /* 動畫播放次數 */
+  animation-timing-function: linear;
+  /* 影片加速速率 */
+}
+
+@keyframes rotate-keyframe {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#clock {
+  width: 300px;
+  height: 300px;
+  background: rgba(235, 235, 235, 0.2);
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  top: calc(50% - 150px);
+  /* 加減乘除前後 記得要空白 */
+}
+
+#hour {
+  width: 20%;
+  height: 10px;
+  background-color: aqua;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 30%;
+  border-radius: 5px;
+  transform-origin: right center;
+}
+
+/* #minute {
+  width: 40%;
+  height: 10px;
+  background-color: blueviolet;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 10%;
+  border-radius: 5px;
+  transform-origin: right center;
+} */
+#minute {
+  width: 40%;
+  height: 10px;
+  background-color: blueviolet;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 10%;
+  border-radius: 5px;
+  transform-origin: right center;
+  background-image: url(.);
+}
+
+#second {
+  width: 45%;
+  height: 6px;
+  background-color: rgb(254, 212, 97);
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 5%;
+  border-radius: 3px;
+  transform-origin: right center;
+}
+
+#text {
+  color: black;
+  font-size: 3rem;
+  text-align: center;
+  top: -60%;
+  position: absolute;
+  width: 100%;
+}

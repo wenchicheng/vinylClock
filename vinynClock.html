@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>♬₊VinynClock♪⋆⁺₊✧</title>
+
+  <!--  Google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;600;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- font awesome -->
+  <!-- <link rel="stylesheet" href="./css/all.css"> -->
+
+  <!-- 自己的外部樣式表 -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- CDNJS 引入 animate.css -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css'
+    integrity='sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=='
+    crossorigin='anonymous' />
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="vinyl" class="rotate"></div>
+
+    <div id="clock">
+      <div id="hour"></div>
+      <div id="minute"></div>
+      <div id="second"></div>
+      <p id="text">00:00:00</p>
+    </div>
+
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+    integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
+    crossorigin='anonymous'></script>
+
+  <script>
+    const elHour = document.getElementById('hour')
+    const elMinute = document.getElementById('minute')
+    const elSecond = document.getElementById('second')
+    const elText = document.getElementById('text')
+
+    const clock = () => {
+      const date = new Date()
+      const hour = date.getHours()
+      const minute = date.getMinutes()
+      const second = date.getSeconds()
+      elHour.style.transform = `rotate(${hour * 30 + 90}deg)`
+      elMinute.style.transform = `rotate(${minute * 6 + 90}deg)`
+      elSecond.style.transform = `rotate(${second * 6 + 90}deg)`
+      elText.innerText = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}:${second.toString().padStart(2, '0')}`
+    }
+    setInterval(clock, 1000)
+    clock()
+
+  </script>
+
+  <p></p>
+</body>
+
+</html>
