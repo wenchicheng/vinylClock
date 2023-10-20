@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="500px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:#221814;}
+	
+		.st1{clip-path:url(#SVGID_2_);fill:#221814;stroke:#221814;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#221814;stroke:#221814;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+]]>
+</style>
+<image style="display:none;overflow:visible;" width="1000" height="1000" xlink:href="../@github/vinylClock/images/orange_vinyl.png"  transform="matrix(5.962440e-009 -0.5 0.5 5.962440e-009 0 500)">
+</image>
+<g>
+	<path class="st2" d="M96.206,258.869l-8.987-7.092l-21.952-7.215l-1.661-2.955l-20.521-7.41c0,0-1.775,1.621-3.172,3.666
+		c-1.208,1.768-2.839,6.332-3.073,8.459c-0.209,1.915,0.259,5.326,0.259,5.326l12.346,4.301l-3.965,13.773l1.826,0.598l4.676-13.664
+		l6.011,1.885l3.189-1.301l21.315,6.915l12.033-0.222"/>
+	<path class="st0" d="M234.269,250.997c-0.813-8.425,5.358-15.914,13.783-16.728c8.425-0.813,15.915,5.358,16.725,13.785
+		c0.815,8.424-5.357,15.913-13.783,16.726C242.568,265.594,235.081,259.422,234.269,250.997z"/>
+	<g>
+		<defs>
+			<polygon id="SVGID_1_" points="72.345,282 70.363,210 247.49,228 257,270.32 			"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<path class="st1" d="M84.244,261.58c0,0,27.153,9.727,51.854,5.938c28.025-4.301,106.806-14.076,106.806-14.076l26.688-3.408
+			l-0.655-6.063l-26.72,2.807c0,0-104.315,14.363-112.342,14.629c-8.026,0.267-26.039,0.619-42.623-6.48"/>
+	</g>
+</g>
+</svg>
