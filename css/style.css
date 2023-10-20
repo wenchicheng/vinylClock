@@ -15,14 +15,24 @@ body {
 #container {
   width: 1024px;
   height: 768px;
-  background-color: rgb(227, 227, 227);
+  /* border: 1px solid #000; */
   /* 置中--------------------- */
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* ------------------------- */
 
+}
+
+#records {
+  width: 630px;
+  height: 560px;
+  background: linear-gradient(198deg, rgba(220, 221, 221, 1) 0%, rgba(199, 199, 199, 1) 100%);
+  border-radius: 16px;
+  position: absolute;
+  top: calc(384px - 280px);
+  left: calc(512px - 315px);
 }
 
 #vinyl {
@@ -31,12 +41,23 @@ body {
   background-image: url("../images/orange_vinyl.png");
   background-size: cover;
   background-repeat: no-repeat;
-  /* 置中--------------------- */
-  /* background-position: center; */
-  position: fixed;
-  top: 17%;
-  left: 26%;
+  /* fixed 定位 置中--------------------- */
+  position: absolute;
+  top: calc(384px - 250px);
+  left: calc(512px - 250px);
+  /* filter: drop-shadow(-5px 8px 8px #746965); */
+}
 
+#shadow {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(199, 199, 199, 0);
+  border-radius: 50%;
+  /* fixed 定位 置中--------------------- */
+  position: absolute;
+  /* top: calc(384px - 250px);
+  left: calc(512px - 250px); */
+  filter: drop-shadow(-5px 8px 8px #746965);
 }
 
 .rotate {
@@ -61,20 +82,21 @@ body {
 }
 
 #clock {
-  width: 300px;
-  height: 300px;
-  background: rgba(235, 235, 235, 0.2);
+  width: 500px;
+  height: 500px;
+  /* background: rgba(235, 235, 235, 0.2); */
   margin: auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   position: relative;
-  top: calc(50% - 150px);
+  top: 50%;
+  transform: translate(0%, -50%);
   /* 加減乘除前後 記得要空白 */
 }
 
 #hour {
   width: 20%;
   height: 10px;
-  background-color: aqua;
+  background-color: rgb(139, 139, 139);
   position: absolute;
   top: calc(50% - 5px);
   left: 30%;
@@ -93,15 +115,18 @@ body {
   transform-origin: right center;
 } */
 #minute {
-  width: 40%;
-  height: 10px;
-  background-color: blueviolet;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: calc(50% - 5px);
-  left: 10%;
-  border-radius: 5px;
-  transform-origin: right center;
-  background-image: url(.);
+  /* left: 100px;
+  top: 100px; */
+  /* transform: translate(-50%, -50%); */
+  /* border: 1px solid gray; */
+  background-image: url(../images/needle_500x500.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* transform-origin: 0px 0px; */
+
 }
 
 #second {
