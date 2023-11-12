@@ -17,6 +17,11 @@
   <!-- 自己的外部樣式表 -->
   <link rel="stylesheet" href="./css/style.css">
 
+  <!-- icons：google font 
+    weight：400, grade：0, OpticalSize：24 -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   <!-- CDNJS 引入 animate.css -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css'
     integrity='sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ=='
@@ -25,21 +30,47 @@
 </head>
 
 <body>
-  <div id="container">
-    <div id="records"></div>
-    <div id="vinyl" class="rotate"></div>
 
+  <!-- 面板 -->
+  <div id="container" class="effect">
+    <!-- 黑膠機 -->
+    <div id="records" class="effect"></div>
+
+    <!-- 黑膠盤 -->
+    <div id="vinyl" class="rotate"></div>
+    <!-- 時鐘 -->
     <div id="clock">
       <div id="hour"></div>
       <div id="second"></div>
       <div id="minute"></div>
-      <p id="text">00:00:00</p>
+      <!-- <p id="text">00:00:00</p> -->
     </div>
 
-    <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/playlist/4tU4PuDmXjSS0Dnnr3VKoi?utm_source=generator&theme=0" width="250"
-      height="352" frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div id="dayOrNight" class="effect btn">
+      <span class="material-symbols-rounded">light_mode</span>
+    </div>
+    <div id="cool" class="effect btn">
+      <span class="material-symbols-rounded">emoticon</span>
+    </div>
+    <div id="like" class="effect btn">
+      <span class="material-symbols-rounded">favorite</span>
+    </div>
+
+    <!-- 跑馬燈 -->
+    <div id="niceday" class="effect">
+      <marquee behavior="alternate" scrollamount="3">Have a nice day !</marquee>
+    </div>
+    <div id="todolist" class="effect"></div>
+    <div id="vinylBlock" class="effect"></div>
+
+
+    <!-- Spotify -->
+
+    <iframe id="spotify"
+      src="https://open.spotify.com/embed/playlist/4tU4PuDmXjSS0Dnnr3VKoi?utm_source=generator&theme=0" frameBorder="0"
+      allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
 
   </div>
 
