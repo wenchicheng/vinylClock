@@ -24,6 +24,8 @@ body {
   --greyLight-2: #c8d0e7;
   --greyLight-3: #bec8e4;
   --greyDark: #9baacf;
+  --darkgray: #282828;
+
 }
 
 /* 陰影效果------------------------- */
@@ -198,7 +200,10 @@ inset -.2rem -.2rem .5rem var(--white); */
   top: 312px;
   left: 110px;
   background-color: var(--greyLight-1);
+  filter: invert(100%) brightness(1);
+
 }
+
 
 /* -----------按鈕----------- */
 

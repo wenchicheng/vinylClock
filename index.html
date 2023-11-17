@@ -72,6 +72,9 @@
       loading="lazy">
     </iframe>
 
+
+    <div id="embed-iframe"></div>
+
   </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
@@ -99,7 +102,32 @@
 
   </script>
 
-  <p></p>
+  <!-- SPOTIFY -->
+
+
+  <!-- <script src="https://open.spotify.com/embed/iframe-api/v1" async>
+  </script>
+  <script type="text/javascript">
+    window.onSpotifyIframeApiReady = (IFrameAPI) => {
+      const element = document.getElementById('embed-iframe');
+      const options = {
+        width: '320',
+        height: '352',
+        uri: 'spotify:playlist:4tU4PuDmXjSS0Dnnr3VKoi'
+      };
+      const callback = (EmbedController) => {
+        document.querySelectorAll('.episode').forEach(
+          episode => {
+            episode.addEventListener('click', () => {
+              EmbedController.loadUri(episode.dataset.spotifyId)
+            });
+          })
+      };
+      IFrameAPI.createController(element, options, callback);
+    };
+  </script> -->
+
+
 </body>
 
 </html>
