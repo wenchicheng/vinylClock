@@ -11,6 +11,7 @@ body {
   margin: 0;
   height: 100vh;
   background-color: #e4ebf5;
+  /* background-color: #091921; */
   font-family: 'Noto Sans TC', sans-serif;
 }
 
@@ -34,6 +35,12 @@ body {
   box-shadow:
     .8rem .8rem 1.4rem var(--greyLight-2),
     -.2rem -.2rem 1.8rem var(--white);
+
+  /* box-shadow:
+    -15px -15px 15px rgba(255, 255, 255, 0.05),
+    inset -15px -15px 15px rgba(255, 255, 255, 0.05),
+    15px 15px 15px rgba(0, 0, 0, 0.3),
+    inset 15px 15px 15px rgba(0, 0, 0, 0.3); */
 }
 
 /* 按下去的效果----------------------- */
@@ -200,7 +207,7 @@ inset -.2rem -.2rem .5rem var(--white); */
   top: 312px;
   left: 110px;
   background-color: var(--greyLight-1);
-  filter: invert(100%) brightness(1);
+  /* filter: invert(100%) brightness(1); */
 
 }
 
@@ -280,14 +287,7 @@ inset -.2rem -.2rem .5rem var(--white); */
   color: var(--greyDark);
 }
 
-#todolist {
-  width: 320px;
-  height: 300px;
-  border-radius: 32px;
-  position: absolute;
-  top: 105px;
-  left: 1220px;
-}
+
 
 #vinylBlock {
   width: 320px;
@@ -296,4 +296,58 @@ inset -.2rem -.2rem .5rem var(--white); */
   position: absolute;
   top: 460px;
   left: 1220px;
+}
+
+/* to do list */
+
+#todolist {
+  width: 320px;
+  height: 300px;
+  border-radius: 32px;
+  position: absolute;
+  top: 105px;
+  left: 1220px;
+  padding: 20px;
+  line-height: 30px;
+}
+
+#listTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#titleInput {
+  background-color: #e4ebf5;
+  width: 280px;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: var(--greyDark);
+  padding: 9px 18px;
+  outline: var(--greyLight-3);
+}
+
+#titleInput::placeholder {
+  color: var(--greyDark);
+}
+
+/* List title pencil */
+.fa-pencil-alt {
+  font-size: 18px;
+  border-radius: 50%;
+  position: absolute;
+  right: 24px;
+  pointer-events: none;
+  color: #a8baf0;
+}
+
+#todolist ul {
+  list-style: none;
+  color: var(--greyDark);
+  font-size: 16px;
+  list-style: none;
 }

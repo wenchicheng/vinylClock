@@ -60,7 +60,33 @@
     <div id="niceday" class="effect">
       <marquee behavior="alternate" scrollamount="3">Have a nice day !</marquee>
     </div>
-    <div id="todolist" class="effect"></div>
+
+    <!-- 代辦清單 -->
+    <div id="todolist" class="effect">
+
+
+      <!-- 清單標題 -->
+      <div id="listTitle">
+        <input id="titleInput" type="text" placeholder="My List" maxlength="21">
+        <i class="fa fa-pencil-alt"></i>
+      </div>
+
+      <!-- 清單列 -->
+      <form id="form">
+        <input type="text" id="text">
+        <!-- <button id="addNewItemBtn">
+          <span class="material-symbols-outlined">add_circle</span>
+        </button> -->
+        <input type="submit" value="&nbsp;+&nbsp;" id="addBtn">
+      </form>
+      <ul id="lists"></ul>
+
+
+
+    </div>
+
+
+
     <div id="vinylBlock" class="effect"></div>
 
 
@@ -71,16 +97,17 @@
       allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
-
-
-    <div id="embed-iframe"></div>
-
   </div>
 
+
+
+
+  <!-- JQ -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
     integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
     crossorigin='anonymous'></script>
 
+  <!-- 時鐘 -->
   <script>
     const elHour = document.getElementById('hour')
     const elMinute = document.getElementById('minute')
@@ -101,31 +128,23 @@
     clock()
 
   </script>
-
-  <!-- SPOTIFY -->
-
-
-  <!-- <script src="https://open.spotify.com/embed/iframe-api/v1" async>
+  <!--  to do list -->
+  <script>
+    $('#form').submit(function (event) {
+      // 停止 form 送出時的預設跳頁動作
+      event.preventDefault()
+      $('#lists').append(`
+					<li>
+						${$('#text').val()}
+						<input type="button" value=" x " class="del">
+					</li>
+				`)
+      $('#text').val('')
+    })
+    $('#lists').on('click', '.del', function () {
+      $(this).parent().remove()
+    })
   </script>
-  <script type="text/javascript">
-    window.onSpotifyIframeApiReady = (IFrameAPI) => {
-      const element = document.getElementById('embed-iframe');
-      const options = {
-        width: '320',
-        height: '352',
-        uri: 'spotify:playlist:4tU4PuDmXjSS0Dnnr3VKoi'
-      };
-      const callback = (EmbedController) => {
-        document.querySelectorAll('.episode').forEach(
-          episode => {
-            episode.addEventListener('click', () => {
-              EmbedController.loadUri(episode.dataset.spotifyId)
-            });
-          })
-      };
-      IFrameAPI.createController(element, options, callback);
-    };
-  </script> -->
 
 
 </body>
