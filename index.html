@@ -87,7 +87,12 @@
 
 
 
-    <div id="vinylBlock" class="effect"></div>
+    <div id="vinylBlock" class="effect">
+      <div>
+        <div id="secondvinyl"><img src="./images/secondvinyl.png"></div>
+        <div id="vinylbox"><img src="./images/vinylbox.png"></div>
+      </div>
+    </div>
 
 
     <!-- Spotify -->
@@ -133,6 +138,14 @@
     $('#form').submit(function (event) {
       // 停止 form 送出時的預設跳頁動作
       event.preventDefault()
+
+      // 最多保留 6 筆代辦事項
+      if ($('#lists li').length >= 6) {
+        alert('最多只能有 6 筆待辦事項');
+        return;
+      }
+
+      // 添加新的代辦事項
       $('#lists').append(`
 					<li>
 						${$('#text').val()}

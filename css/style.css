@@ -190,14 +190,6 @@ inset -.2rem -.2rem .5rem var(--white); */
 
 
 
-/* #text {
-  color: black;
-  font-size: 3rem;
-  text-align: center;
-  top: -60%;
-  position: absolute;
-  width: 100%;
-} */
 
 #spotify {
   border-radius: 32px;
@@ -288,17 +280,7 @@ inset -.2rem -.2rem .5rem var(--white); */
 }
 
 
-
-#vinylBlock {
-  width: 320px;
-  height: 200px;
-  border-radius: 32px;
-  position: absolute;
-  top: 460px;
-  left: 1220px;
-}
-
-/* to do list */
+/* to do list----------------------------------- */
 
 #todolist {
   width: 320px;
@@ -335,6 +317,48 @@ inset -.2rem -.2rem .5rem var(--white); */
   color: var(--greyDark);
 }
 
+
+#text {
+  font-size: 1rem;
+  width: 87%;
+  height: 30px;
+  border: none;
+  outline: none;
+  background:var(--greyLight-2);
+  margin-right: 4px;
+}
+
+#text:focus {
+  background: var(--greyLight-2);
+}
+
+#addBtn,
+.del {
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  background: var(--greyLight-2);
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  scale: 1.2;
+  margin-left: 8px;
+}
+
+.del{
+  line-height: 16px; /* 保持高度和寬度相等 */
+}
+
+#addBtn:active,
+.del:active {
+  box-shadow:
+    inset .2rem .2rem .5rem var(--greyLight-2),
+    inset -.2rem -.2rem .5rem var(--white);
+}
+
 /* List title pencil */
 .fa-pencil-alt {
   font-size: 18px;
@@ -351,3 +375,44 @@ inset -.2rem -.2rem .5rem var(--white); */
   font-size: 16px;
   list-style: none;
 }
+#todolist li{
+  line-height: 30px;
+}
+
+
+/* vinyl----------------------------- */
+
+#vinylBlock {
+  width: 320px;
+  height: 200px;
+  border-radius: 32px;
+  position: absolute;
+  top: 460px;
+  left: 1220px;
+}
+
+#vinylBlock img{
+  width: 200px;
+  
+}
+
+#vinylbox{
+position: absolute;
+}
+
+#secondvinyl{
+position: absolute;
+left: 20px;
+filter: drop-shadow(5px 5px 3px var(--greyLight-3));
+transition: left 0.5s ease, transform 0.5s ease-in-out; 
+/* 添加過渡效果，包括 transform */
+  transform-origin: center; 
+/* 設定旋轉的中心點 */
+}
+
+#vinylBlock:hover #secondvinyl {
+  left: 120px;
+  transform: rotate(45deg);
+}
+
+
